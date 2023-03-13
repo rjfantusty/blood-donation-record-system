@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin Dashboard</title>
+	<link rel="stylesheet" type="text/css" href="/css/admin-dashboard.css">
+</head>
+<body>
+	<div class="main-container">
+		<h1>Welcome to the Admin Dashboard</h1>
+		<h2>Create a Blood Bank Account</h2>
+
+    <% if(error) { %> <%= error %> <% } %>
+    <% if(success) { %> <%= success %> <% } %>
+
+		<form action="/blood-bank/create" method="POST">
+			<label for="bank-name">Bank Name:</label>
+			<input type="text" id="bank-name" name="name" required><br><br>
+			<label for="bank-address">Bank Address:</label>
+			<input type="text" id="bank-address" name="address" required><br><br>
+			<label for="bank-contact">Bank Contact:</label>
+			<input type="text" id="bank-contact" name="contact" required><br><br>
+			<label for="bank-username">Username:</label>
+			<input type="text" id="bank-username" name="username" required><br><br>
+			<label for="bank-password">Password:</label>
+			<input type="password" id="bank-password" name="password" required><br><br>
+			<input type="submit" value="Create Bank Account">
+		</form>
+
+    <h2>Basic Reports</h2>
+		<p>Total donors : <span id="donor-count">0</span></p>
+		<p>Total blood donated today: <span id="donation-today">0</span></p>
+		<p>Total blood donated this week: <span id="donation-week">0</span></p>
+		<p>Total blood donated this month: <span id="donation-month">0</span></p>
+	</div>
+
+		
+	</div>
+</body>
+</html>

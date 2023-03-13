@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blood Bank Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="/css/blood-bank-dashboard.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <h1>Welcome to your blood bank dashboard!</h1>
+
+      <% if(error) { %> <%= error %> <% } %>
+      <% if(success) { %> <%= success %> <% } %>
+
+      <h2>Issue Donation Certificate</h2>
+      <p>
+        Please enter the donor's Aadhaar card number below to issue their
+        donation certificate.
+      </p>
+      <form action="/blood-bank/issue-certificate" method="post">
+        <label for="aadhaar-number">Aadhaar Card Number:</label>
+        <input type="text" id="aadhaar-number" name="aadhaar" required />
+        <button type="submit" id="issue-certificate-btn">
+          Issue Certificate
+        </button>
+      </form>
+    </div>
+  </body>
+</html>

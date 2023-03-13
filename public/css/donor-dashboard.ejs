@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>donor-dashboard</title>
+	<link rel="stylesheet" type="text/css" href="../public/css/donor-dashboard.css">
+</head>
+<body>
+	<div class="certificate-container">
+		<h1>Blood Donation Certificate</h1>
+		<p>Certificate Issued to:</p>
+		<p>Name: John Doe</p>
+		<p>Blood Bank: ABC Blood Bank</p>
+		<p>Date: 10/03/2023</p>
+		<p>Time: 10:00 AM</p>
+		<p>Place: XYZ Hospital</p>
+		<button onclick="downloadCertificate()">Download PDF</button>
+	</div>
+    
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js">
+
+	</script>
+	<script>
+		function downloadCertificate() {
+  // Get the element containing the certificate information
+  const certificateContainer = document.querySelector('.certificate-container');
+
+  // Use html2pdf library to generate PDF from the certificate container element
+  html2pdf(certificateContainer, {
+    margin: [0, 0, 0, 0],
+    filename: 'blood-donation-certificate.pdf',
+    image: { type: 'jpeg', quality: 0.98 },
+    html2canvas: { scale: 2 },
+    jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+  });
+}
+
+	</script>
+</body>
+</html>

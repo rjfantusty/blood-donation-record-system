@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="/css/blood-bank-login.css" />
+  </head>
+  <body>
+    <div class="login-container">
+      <h1>Login</h1>
+
+      <% if(error) { %> <%= error %> <% } %>
+      <% if(success) { %> <%= success %> <% } %>
+
+      <form action="/blood-bank/login" method="post">
+        <label for="mobile">Username:</label>
+        <input type="text" id="mobile" name="username" /><br /><br />
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" /><br /><br />
+        <input type="submit" value="Login" />
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="/css/admin-login.css" />
+  </head>
+  <body>
+    <div class="login-container">
+
+      <% if(error) { %> <%= error %> <% } %>
+      <% if(success) { %> <%= success %> <% } %>
+
+      <h1>Login</h1>
+      <form method="post" action="/admin/login">
+        <label for="username">admin id:</label>
+        <input type="text" id="username" name="username" /><br /><br />
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" /><br /><br />
+        <input type="submit" value="Login" />
+      </form>
+    </div>
+  </body>
+</html>

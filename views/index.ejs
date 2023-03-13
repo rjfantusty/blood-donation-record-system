@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>National Blood Donation Record System</title>
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+	<div class="main-container">
+
+		<% if(error) { %> <%= error %> <% } %>
+		<% if(success) { %> <%= success %> <% } %>
+		
+		<h1>National Blood Donation Record System</h1>
+		<h2>Login As:</h2>
+		<div class="login-options">
+			<a href="/donor/login">Donor</a>
+			<a href="/blood-bank/login">Blood Bank</a>
+			<a href="/admin/login">Admin</a>
+		</div>
+	</div>
+</body>
+</html>

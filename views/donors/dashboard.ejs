@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>donor-dashboard</title>
+    <link rel="stylesheet" type="text/css" href="/css/donor-dashboard.css" />
+  </head>
+  <body>
+    <% if(error) { %> <%= error %> <% } %> <% if(success) { %> <%= success %> <%
+    } %> 
+    
+    <% for (const certificate of certificates) { %>
+    <div class="certificate-container" id="<%= certificate._id %>">
+      <h1>Blood Donation Certificate</h1>
+      <p>Certificate Issued to:</p>
+      <p>Name: <%= certificate.donor.name %></p>
+      <p>Blood Bank: <%= certificate.blood_bank.name %></p>
+      <p>Date: <%= certificate.time.toLocaleDateString() %></p>
+      <p>Time: <%= certificate.time.toLocaleTimeString() %></p>
+      <p>Place: <%= certificate.place %></p>
+      <button onclick="downloadCertificate('<%= certificate._id %>')">
+        Download PDF
+      </button>
+    </div>
+    <br /><br /><br />
+    <% } %>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+      integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script>
+      function downloadCertificate(certificateId) {
+        const element = document.getElementById(certificateId);
+        const options = {
+          margin: [0.5, 0.5, 0.5, 0.5],
+          filename: "download.pdf",
+          image: { type: "jpeg", quality: 0.98 },
+          html2canvas: { scale: 2 },
+          jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
+        };
+
+        // Use html2pdf to generate the PDF and download it
+        html2pdf().from(element).set(options).save();
+      }
+    </script>
+  </body>
+</html>

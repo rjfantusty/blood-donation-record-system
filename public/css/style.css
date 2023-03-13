@@ -1,0 +1,67 @@
+/* style.css */
+
+/* Basic styles */
+body {
+    background-color: #f8f8f8;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Center-align main container */
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Style headings */
+  h1, h2 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: block;
+  }
+  
+  h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  h2 {
+    font-size: 36px;
+    font-weight: normal;
+    margin-bottom: 20px;
+  }
+  
+  /* Style login options */
+  .login-options {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .login-options a {
+    background-color: #2ec433;
+    border-radius: 5px;
+    color: #804747;
+    cursor: pointer;
+    font-size: 24px;
+    margin: 10px 0;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: block;
+    width: 200px;
+  }
+  
+  .login-options a:hover {
+    background-color: #3e8e41;
+  }
+  
