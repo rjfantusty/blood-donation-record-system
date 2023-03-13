@@ -1,5 +1,6 @@
 const AdminModel = require("../models/adminModel");
 const { getAdmin } = require("../services/adminService");
+const { getCertificates } = require("../services/certificateService");
 const { verifyPassword } = require("../services/passwordService");
 const { createToken } = require("../services/tokenService");
 
