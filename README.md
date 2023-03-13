@@ -20,9 +20,12 @@ HTML/CSS
 JavaScript
 
 # Installation
-Clone the repository
-Install the dependencies using npm install
-Start the server using npm start
+Clone the repository.
+
+Install the dependencies using `npm install`.
+
+Start the server using `npm start`
+
 Access the application at http://localhost:3000
 
 Access the application using cloud Database https://blood-donation-record-system-production.up.railway.app/
