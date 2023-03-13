@@ -33,15 +33,18 @@ Access the application using cloud Database https://blood-donation-record-system
 # credentials
 
 Admin:
-admin id : raj
-admin password : raj
 
-donor : i have created a donor by sign up
-mobile no : 9200688776
-password : rj@123
+`admin id` : `raj`
+`admin password` : `raj`
 
-blood bank : i have created a blood bank by using admin panel
-username : bloodbank
-password : blood@bank
+donor : i have created a donor by sign up.
+
+`mobile no `: `9200688776`
+`password` : `rj@123`
+
+blood bank : i have created a blood bank by using admin panel.
+
+`username` : `bloodbank`
+`password `: `blood@bank`
 
 
