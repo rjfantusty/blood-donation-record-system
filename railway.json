@@ -11,7 +11,7 @@
   "environments": {
     "production": {
       "deploy": {
-        "startCommand": "node server.js"
+        "startCommand": "node server.js" 
       }
     }
   }
